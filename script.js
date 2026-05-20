@@ -17,6 +17,19 @@
     content.innerText = topicArr[counter].content;
     itemCounter.innerText = counter + 1;
 
+    //fala
+    const speech=new SpeechSynthesisUtterance(topicArr[counter].content)
+    const question=new SpeechSynthesisUtterance(topicArr[counter].title)
+    
+    speech.lang="pt-br"
+    question.lang="pt-br"
+
+    speech.rate=1.1
+    question.rate=1.1
+    
+    window.speechSynthesis.speak(question)
+    window.speechSynthesis.speak(speech)
+
     const hasScroll = title.querySelector("span.hasScroll");
 
     if (flashcard.clientHeight < flashcard.scrollHeight)
