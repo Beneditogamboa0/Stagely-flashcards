@@ -88,7 +88,7 @@
   );
 
   insertContent(
-    "6. Quias são as hipóteses do vosso trabalho?",
+    "6. Quais são as hipóteses do vosso trabalho?",
     `H1: A implementação de uma aplicação para gestão de estágios melhorará significativamente a eficiência dos processos administrativos relacionados ao controlo e acompanhamento dos estágios curriculares no IPDDF. H2: A utilização de uma aplicação reduzirá o tempo gasto em tarefas administrativas relacionadas à gestão de estágios, tornando o processo mais efficiente para os intervenientes. H3: A centralização das informações sobre o estágio numa única aplicação facilitará a comunicação entre as partes envolvidas e minimizará erros e perdas de dados.`,
   );
 
