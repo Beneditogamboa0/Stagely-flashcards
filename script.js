@@ -38,6 +38,7 @@
   }
 
   function changeContent(topicArr, action) {
+    window.speechSynthesis.cancel()
     switch (action) {
       case "advance":
         counter++;
