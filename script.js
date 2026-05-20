@@ -23,9 +23,6 @@
     
     speech.lang="pt-br"
     question.lang="pt-br"
-
-    speech.rate=1.1
-    question.rate=1.1
     
     window.speechSynthesis.speak(question)
     window.speechSynthesis.speak(speech)
