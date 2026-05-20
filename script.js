@@ -23,9 +23,6 @@
     
     speech.lang="pt-br"
     question.lang="pt-br"
-
-    speech.rate=1.1
-    question.rate=1.1
     
     window.speechSynthesis.speak(question)
     window.speechSynthesis.speak(speech)
@@ -55,7 +52,9 @@
   }
 
   backBtn.addEventListener("click", () => changeContent(contents, "return"));
+  window.addEventListener("keydown", (event) => {if(event.key==="ArrowLeft") changeContent(contents, "return")});
   goBtn.addEventListener("click", () => changeContent(contents, "advance"));
+  window.addEventListener("keydown", (event) => {if(event.key==="ArrowRight") changeContent(contents, "advance")});
 
   /*
     Write your contents below this, I got no more ideas
