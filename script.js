@@ -18,14 +18,14 @@
     itemCounter.innerText = counter + 1;
 
     //fala
-    const speech=new SpeechSynthesisUtterance(topicArr[counter].content)
-    const question=new SpeechSynthesisUtterance(topicArr[counter].title)
-    
-    speech.lang="pt-br"
-    question.lang="pt-br"
-    
-    window.speechSynthesis.speak(question)
-    window.speechSynthesis.speak(speech)
+    const speech = new SpeechSynthesisUtterance(topicArr[counter].content);
+    const question = new SpeechSynthesisUtterance(topicArr[counter].title);
+
+    speech.lang = "pt-br";
+    question.lang = "pt-br";
+
+    window.speechSynthesis.speak(question);
+    window.speechSynthesis.speak(speech);
 
     const hasScroll = title.querySelector("span.hasScroll");
 
@@ -35,7 +35,7 @@
   }
 
   function changeContent(topicArr, action) {
-    window.speechSynthesis.cancel()
+    window.speechSynthesis.cancel();
     switch (action) {
       case "advance":
         counter++;
@@ -51,10 +51,14 @@
     writeContent(topicArr);
   }
 
+  window.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft") 
+      changeContent(contents, "return");
+    else if(event.key==="ArrowRight")
+      changeContent(contents, "advance");
+  });
   backBtn.addEventListener("click", () => changeContent(contents, "return"));
-  window.addEventListener("keydown", (event) => {if(event.key==="ArrowLeft") changeContent(contents, "return")});
   goBtn.addEventListener("click", () => changeContent(contents, "advance"));
-  window.addEventListener("keydown", (event) => {if(event.key==="ArrowRight") changeContent(contents, "advance")});
 
   /*
     Write your contents below this, I got no more ideas
